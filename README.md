@@ -7,7 +7,7 @@ This makes it easy to create small, self-contained HTML applications for elastic
 Install:
 
 ```sh
-# todo
+sudo /usr/share/elasticsearch/bin/plugin -install wbzyl/hello-elasticsearch
 ```
 
 After install the application will be available at
