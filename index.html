@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello, elasticsearch!</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>body { font: 100% normal 'Helvetica Neue', sans-serif; margin: 4em; }</style>
+  <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+  <p>
+    &quot;Hello, <span id="cluster_name">elasticsearch</span>!&quot;,
+    says <strong id="node_name">node</strong>,
+    running on <em id="host_name">localhost</em>.
+  </p>
+
+  <script>
+  $(function() {
+    $.getJSON('http://localhost:9200/_cluster/nodes/_local', function(data) {
+      console.log(data);
+
+      var node_id = Object.keys(data.nodes)[0]
+        , cluster_name = data['cluster_name']
+        , node_name    = data.nodes[node_id]['name']
+        , host_name    = data.nodes[node_id]['hostname'];
+
+      $('#cluster_name').html( cluster_name);
+      $('#node_name').html(    node_name   );
+      $('#host_name').html(    host_name   );
+    })
+  });
+  </script>
+</body>
+</html>
