@@ -11,4 +11,4 @@ Install:
 ```
 
 After install the application will be available at
-http://localhost:9200/_plugin/hello-elasticsearch/index.html.
+[http://localhost:9200/_plugin/hello-elasticsearch/index.html](http://localhost:9200/_plugin/hello-elasticsearch/index.html)
