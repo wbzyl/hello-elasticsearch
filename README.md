@@ -6,10 +6,11 @@ This makes it easy to create small, self-contained HTML applications
 for elasticsearch, just like this one:
 
 ```
-.
+|-- css
+|   |-- main.css
+|   `-- normalize.css
 |-- index.html
 `-- README.md
-
 ```
 
 Install:
