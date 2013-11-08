@@ -1,4 +1,4 @@
-## hello-elasticsearch — elasticsearch site plugin
+## hello-elasticsearch – Elasticsearch site plugin
 
 [World's Smallest Application Hosted in Elasticsearch](https://gist.github.com/karmi/3381710/) by K. Minarik.
 
