@@ -14,7 +14,7 @@
   <body>
 
     <p>
-      &quot;Hello, <span id="cluster_name">elasticsearch</span>!&quot;,
+      “hello, <span id="cluster_name">elasticsearch</span>!”,
       says <strong id="node_name">node</strong>,
       running on <em id="host_name">localhost</em>.
     </p>
@@ -24,18 +24,18 @@
 
     <script>
       $(function() {
-      $.getJSON('http://localhost:9200/_cluster/nodes/_local', function(data) {
-      console.log(data);
+          $.getJSON('http://localhost:9200/_cluster/nodes/_local', function(data) {
+              console.log(data);
 
-      var node_id = Object.keys(data.nodes)[0]
-      , cluster_name = data['cluster_name']
-      , node_name    = data.nodes[node_id]['name']
-      , host_name    = data.nodes[node_id]['hostname'];
+              var node_id = Object.keys(data.nodes)[0]
+              , cluster_name = data['cluster_name']
+              , node_name    = data.nodes[node_id]['name']
+              , host_name    = data.nodes[node_id]['hostname'];
 
-      $('#cluster_name').html( cluster_name);
-      $('#node_name').html(    node_name   );
-      $('#host_name').html(    host_name   );
-      })
+              $('#cluster_name').html( cluster_name);
+              $('#node_name').html(    node_name   );
+              $('#host_name').html(    host_name   );
+          })
       });
     </script>
 
