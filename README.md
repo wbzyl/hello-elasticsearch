@@ -3,8 +3,7 @@
 A slightly modified Karel Minarik’s
 [World's Smallest Application Hosted in Elasticsearch](https://gist.github.com/karmi/3381710/).
 
-This makes it easy to create small, self-contained HTML applications
-for elasticsearch, just like this one:
+Small, self-contained HTML applications for elasticsearch, just like this one:
 
 ```
 |-- css
@@ -14,15 +13,14 @@ for elasticsearch, just like this one:
 `-- README.md
 ```
 
-Install:
+Install this plugin with this command:
 
 ```sh
 sudo /usr/share/elasticsearch/bin/plugin -install wbzyl/hello-elasticsearch
 ```
 
-Po instalacji pliki *index.html* oraz *README.md* znajdziemy
-w katalogu */usr/share/elasticsearch/plugins/hello-elasticsearch/_site*
-
+The files *index.html* and *README.md* are copied into
+*/usr/share/elasticsearch/plugins/hello-elasticsearch/_site* folder.
 
 After install the application will be available at
 [http://localhost:9200/_plugin/hello-elasticsearch/index.html](http://localhost:9200/_plugin/hello-elasticsearch/index.html)
