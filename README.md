@@ -62,3 +62,8 @@ który zaserwuje tę stronę, na przykład serwer *serve* z pakietu Node.js:
 ```sh
 npm install -g serve
 ```
+
+
+### bulk import
+
+TODO: import imieniny

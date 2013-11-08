@@ -1,33 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hello, elasticsearch!</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <style>body { font: 100% normal 'Helvetica Neue', sans-serif; margin: 4em; }</style>
-  <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-</head>
-<body>
-  <p>
-    &quot;Hello, <span id="cluster_name">elasticsearch</span>!&quot;,
-    says <strong id="node_name">node</strong>,
-    running on <em id="host_name">localhost</em>.
-  </p>
+<!doctype html>
+<html lang="pl" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hello, elasticsearch!</title>
 
-  <script>
-  $(function() {
-    $.getJSON('http://localhost:9200/_cluster/nodes/_local', function(data) {
+    <meta name="description" content="elasticsearch site plugin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <p>
+      &quot;Hello, <span id="cluster_name">elasticsearch</span>!&quot;,
+      says <strong id="node_name">node</strong>,
+      running on <em id="host_name">localhost</em>.
+    </p>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+    <script>
+      $(function() {
+      $.getJSON('http://localhost:9200/_cluster/nodes/_local', function(data) {
       console.log(data);
 
       var node_id = Object.keys(data.nodes)[0]
-        , cluster_name = data['cluster_name']
-        , node_name    = data.nodes[node_id]['name']
-        , host_name    = data.nodes[node_id]['hostname'];
+      , cluster_name = data['cluster_name']
+      , node_name    = data.nodes[node_id]['name']
+      , host_name    = data.nodes[node_id]['hostname'];
 
       $('#cluster_name').html( cluster_name);
       $('#node_name').html(    node_name   );
       $('#host_name').html(    host_name   );
-    })
-  });
-  </script>
-</body>
+      })
+      });
+    </script>
+
+  </body>
 </html>
