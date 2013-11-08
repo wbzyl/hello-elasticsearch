@@ -25,6 +25,7 @@
     <script>
       $(function() {
           $.getJSON('http://localhost:9200/_cluster/nodes/_local', function(data) {
+              console.log('is CORS supported?', $.support.cors);
               console.log(data);
 
               var node_id = Object.keys(data.nodes)[0]
