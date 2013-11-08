@@ -3,7 +3,7 @@
 A slightly modified Karel Minarik’s
 [World's Smallest Application Hosted in Elasticsearch](https://gist.github.com/karmi/3381710/).
 
-Small, self-contained HTML applications for elasticsearch, just like this one:
+This is a small, self-contained HTML applications for Elasticsearch:
 
 ```
 |-- css
